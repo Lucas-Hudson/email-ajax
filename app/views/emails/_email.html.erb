@@ -1,0 +1,5 @@
+<li class="list-group-item" id="<%= email.id %>">
+  <span class="d-inline-block text-truncate" style="max-width: 400px;">
+   <a <%= link_to "#{email.object}", email_path(email), remote: true %></a>
+  </span>
+</li>

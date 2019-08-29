@@ -1,0 +1,35 @@
+<div class="container">
+
+  <div class="container text-center">
+      <a class="btn btn-primary" <%= link_to "Refresh", emails_path, method: :post, remote: true %></a>
+  </div><br><br>
+
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          Object
+        </div>
+        <ul class="list-group list-group-flush" id="object">
+          <% @emails.each do |email| %>
+          <%= render 'email', email: email %>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col" id="body">
+      <div class="card" style="height: 100%">
+        <div class="card-header">
+          <span class="d-inline-block text-truncate font-weight-bold" style="max-width: 450px;">
+           Body
+          </span>
+        </div>
+        <div class="card-body" id="body">
+          <p class="text-secondary">No emails selected...</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

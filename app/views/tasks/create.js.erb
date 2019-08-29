@@ -1,0 +1,3 @@
+list = document.getElementsByClassName("card")[<%= @task.category.id - 1 %>].childNodes[1]
+
+list.insertAdjacentHTML("beforeend", "<li> <%= j render 'task', task: @task %> </li>")

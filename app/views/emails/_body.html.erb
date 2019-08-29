@@ -1,0 +1,20 @@
+  <div class="card" style="height: 100%">
+    <div class="card-header">
+      <span class="d-inline-block text-truncate font-weight-bold" style="max-width: 400px;" id="body_title">
+       <%= @email.object %>
+      </span>
+    </div>
+    <div class="card-body" id="content">
+      <p><%= @email.body %></p>
+    </div>
+    <div class="container" id="buttons">
+      <div class="row" style="margin:30px">
+        <div class="col text-center">
+          <a class="btn btn-primary" <%= link_to "Unread", root_path %></a>
+        </div>
+        <div class="col text-center">
+          <a class="btn btn-danger" <%= link_to "Delete", email_path(@email), method: :delete, remote: true %></a>
+        </div>
+      </div>
+    </div>
+  </div>

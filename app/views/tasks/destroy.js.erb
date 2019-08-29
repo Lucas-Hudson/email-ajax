@@ -1,0 +1,6 @@
+list = document.getElementsByClassName("card")[<%= @task.category.id - 1 %>].childNodes[1]
+item = document.getElementById("<%= @task.id %>")
+
+list.removeChild(item)
+console.log(<%= @task.id %>)
+console.log(item)
