@@ -1,5 +1,13 @@
 <li class="list-group-item" id="<%= email.id %>">
-  <span class="d-inline-block text-truncate" style="max-width: 400px;">
-   <a <%= link_to "#{email.object}", email_path(email), remote: true %></a>
-  </span>
+  <a class="d-inline-block text-truncate  align-middle" style="max-width: 400px"
+      <%= link_to "#{email.object}", email_path(email), remote: true %>
+  </a>
+
+    <span class="badge badge-pill badge-primary float-right" id="unread <%= email.id %>"
+      <% if email.read == true %>
+        style="display:none"
+      <% end %>
+      >
+      Unread</span>
+
 </li>

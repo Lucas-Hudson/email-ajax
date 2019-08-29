@@ -1,0 +1,7 @@
+<% if @email.read == true %>
+  document.getElementById("btn-read <%= @email.id %>").innerHTML = "Unread"
+  document.getElementById("unread <%= @email.id %>").style.display = "none"
+<% else %>
+  document.getElementById("btn-read <%= @email.id %>").innerHTML = "Read"
+  document.getElementById("unread <%= @email.id %>").style.display = ""
+<% end %>

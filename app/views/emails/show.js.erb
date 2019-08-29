@@ -1,1 +1,2 @@
 document.getElementById("body").innerHTML = "<%= j render 'body', email: @email %>"
+document.getElementById("unread <%= @email.id %>").style.display = "none"
